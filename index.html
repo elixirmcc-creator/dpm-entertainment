@@ -1181,6 +1181,85 @@
         </div>
     </section>
 
+    <!-- Main Content Canvas (Cinematic Moments) -->
+    <main class="relative pt-32 pb-32">
+        <!-- Ambient Particles -->
+        <div class="particles" id="particles-container"></div>
+        
+        <!-- Cinematic Background Lighting -->
+        <div class="fixed top-1/4 left-1/4 w-1/2 h-1/2 gold-glow rounded-full mix-blend-screen pointer-events-none z-[-1]"></div>
+        
+        <section class="px-6 md:px-20 max-w-[1600px] mx-auto relative z-10">
+            <!-- Section Header -->
+            <div class="text-center mb-16 md:mb-24 reveal-element">
+                <span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] block mb-4 uppercase text-xs font-bold text-primary">THE ARCHIVE</span>
+                <h1 class="font-display-lg text-display-lg text-on-surface tracking-wide text-5xl font-black text-white">
+                    <span class="block">Cinematic</span>
+                    <span class="italic text-primary font-light">Moments</span>
+                </h1>
+                <p class="font-body-md text-body-md text-on-surface-variant mt-6 max-w-2xl mx-auto glass-panel p-6 opacity-80">
+                    A curated glimpse into the grandeur and high-fashion allure of DPM INDIA. Witness the transformation, the prestige, and the unforgettable stage visuals.
+                </p>
+            </div>
+            
+            <!-- Editorial Staggered Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+                <!-- Left Column (Vertical Shots) -->
+                <div class="md:col-span-3 flex flex-col gap-6 reveal-element" style="transition-delay: 0.1s;">
+                    <div class="relative h-[409px] md:h-[512px] image-card overflow-hidden rounded border border-secondary/10 group cursor-pointer">
+                        <img alt="BTS" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS014J6lbQDGi307ybgAOIXy5DMYt6siINhNoX32pHD3jyPTliyyitYEkbTBBiZtC8gMQ-LI-foriJoiiLs6H9ou0V8um5p8ByiBp002e4zk67iCC07HOs20HPYIp09Qio5EXXhfFpkl-3_YcoSjEpBSIZFdQ1BjpkC1Jxlnsrf4vpD0M0vfqSznkCHE3WGuQJ9njY4Inz6NhCQ3O-rKXwX_Gi0V-k6686o-07R8MlafxVpj1xHhInQzd290zRASUsjC2VCrKvHflM"/>
+                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full">
+                            <span class="text-xs text-primary bg-surface/50 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">BTS</span>
+                            <h3 class="text-2xl text-white font-bold">The Preparation</h3>
+                        </div>
+                    </div>
+                    <div class="relative h-[307px] md:h-[358px] image-card overflow-hidden rounded border border-secondary/10 group cursor-pointer glass-panel mt-8 md:-ml-8 z-20">
+                        <img alt="Details" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-80 mix-blend-luminosity hover:mix-blend-normal hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeqySpcrvpy0I09HvchhCTHBLm8CXaXxscOpQGZD0zhXYMUTXsX1y_J9WVRb5dpeLUAPMYsHtOVNqD4HV06StvPXdyx31VMqRGmgvSz0Zt-IITS9rEv93de13rjNcwS9XGIacBoRdIkC0oYa1WXBSo4r3uLOlf7Uw-EVZSW4D5jkxUgJGcV5c0F6dzrKbCMesbbpP3lMWfx37plZ2P7ou6GhV0ECe5QoKL7RFen0wWu-YvfLwaYAesQwb1btGW2FFcZCccKU62bkyp"/>
+                    </div>
+                </div>
+                
+                <!-- Center Column (Hero Shot) -->
+                <div class="md:col-span-6 h-[614px] md:h-[870px] relative image-card overflow-hidden rounded border border-secondary/20 group cursor-pointer reveal-element z-10" style="transition-delay: 0.3s;">
+                    <img alt="The Finale" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwz03GGntj6-6N5SmjWa4Kdcg7BySUSqSpNyxmy_BBv2mlsaPfaJ5jG0FTe29n4bEcdz61u5Mrntp8Qgabwxj7O3VKOpziOcHltOAg07vOxrdhRAqf0ofapoqIRJBVmILy7wMbTYdzh1Jz1jHbc6GbdXGaj5JIBKre3KnDCLsJwxmRju4zxsP5v4X4Rw416zKmETv8V9mWSLFpBn1ZIh7xgRP71a_hU-cWS_MsoqrG1N8vwfFUytFuJk3x8QOKpP_96d4JjML3cW2-"/>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-90 z-10"></div>
+                    <div class="absolute bottom-0 left-0 p-8 md:p-12 z-20 w-full">
+                        <span class="text-xs text-primary tracking-widest mb-4 block uppercase font-bold">THE FINALE</span>
+                        <h2 class="text-4xl text-white leading-tight mb-4 group-hover:text-primary transition-colors duration-500 font-bold">The Final Walk</h2>
+                        <div class="w-12 h-1 bg-primary mb-6 group-hover:w-24 transition-all duration-500"></div>
+                        <p class="text-sm text-white/80 max-w-md hidden md:block opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
+                            Capturing the decisive moment of elegance and poise under the grand stage lights.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right Column (Staggered Shots) -->
+                <div class="md:col-span-3 flex flex-col gap-6 reveal-element" style="transition-delay: 0.5s;">
+                    <div class="relative h-[307px] md:h-[409px] image-card overflow-hidden rounded border border-secondary/10 group cursor-pointer md:mt-16 z-20 glass-panel md:-mr-8">
+                        <img alt="Portrait" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 grayscale hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxz1pPyb3o-Wkp9UF9L_1QQPWVOb57qUNoHCLPFW95BlqFy946K431vaN7Di0VRS0Cg5-veyyhrM7EObP-DSmnNT8BOwySM1ZIAas8l6K0FV1erG_8v6s3dgNtbgIfSHd8RQCcoCyECdr1dSbh6ugcidiYkkce9gqQxkgjlPBShI5CEpfrxGqNXEme2Vrpl-MRnKrpakdMgUvkklG47i-7x75GO2c6AkBO6H4CwiMHDjWq50fTxJpBpKStdFlK96x9AZvUMZw3gni0"/>
+                    </div>
+                    <div class="relative h-[409px] md:h-[460px] image-card overflow-hidden rounded border border-secondary/10 group cursor-pointer mt-4">
+                        <img alt="Crowning" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDH2xXCZ-St8HvpIV9KsE7QQlG4oOpN4V_uYsRM9tE7lfG8B2XwL3QmicCiuJ2ZYTsJVBeVSyF8RNi3oZFcNevaDZvOEAFo4Yr5sSFwYY5ahrS-tQw52ymQ2LriiMb51gK-6rBpbKhr3hC8yUVGDDnO6h91IoollJQ65jfTXxq30mkB_wPr53U3XwK3lQho8skK11aTzXB8D09TM0utcWhoRYBtmd_DWS0m2aSbRcrp3Y_3qrlQsjxgvDkcYdRLtEqnWQOl2MAST10"/>
+                        <div class="absolute bottom-0 left-0 p-6 z-20 w-full text-right">
+                            <h3 class="text-2xl text-white font-bold mb-2">The Crowning</h3>
+                            <span class="text-xs text-primary uppercase tracking-widest font-bold">MOMENT</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- View Full Gallery Button -->
+            <div class="mt-20 flex justify-center reveal-element">
+                <button class="group relative px-8 py-4 bg-transparent border border-primary text-primary font-bold text-xs tracking-widest overflow-hidden transition-all duration-300 hover:text-black hover:shadow-[0_0_20px_rgba(233,195,73,0.3)] uppercase">
+                    <span class="relative z-10 flex items-center gap-2">
+                        EXPLORE FULL ARCHIVE
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </span>
+                    <div class="absolute inset-0 h-full w-0 bg-primary transition-all duration-300 ease-out group-hover:w-full z-0"></div>
+                </button>
+            </div>
+        </section>
+    </main>
+
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-brand">
@@ -1352,6 +1431,21 @@
                 modalVideo.currentTime = 0;
             }
         });
+        // Scroll Reveal Logic for Cinematic Moments
+        const revealElements = document.querySelectorAll('.reveal-element');
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, revealOptions);
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
     </script>
 </body>
 </html>
