@@ -2556,3 +2556,143 @@ body {
     transform: translateY(0);
 }
 
+/* --- Extra Benefits Section (Crown Jewels) --- */
+
+.glass-panel-luxury {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid rgba(233, 195, 73, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(233, 195, 73, 0.1);
+}
+
+.champagne-border {
+    border: 1px solid rgba(233, 195, 73, 0.3);
+}
+
+/* Particles animation for Extra Benefits */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    background-color: #ffe088;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(255, 224, 136, 0.8);
+    animation: float-drift 15s infinite linear;
+}
+
+@keyframes float-drift {
+    0% {
+        transform: translateY(110vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: translateY(90vh) translateX(20px) scale(1);
+    }
+    50% {
+        transform: translateY(50vh) translateX(-20px) scale(1.2);
+    }
+    90% {
+        opacity: 0.8;
+        transform: translateY(10vh) translateX(10px) scale(1);
+    }
+    100% {
+        transform: translateY(-10vh) translateX(0) scale(0);
+        opacity: 0;
+    }
+}
+
+/* Hide scrollbar for horizontal flow */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.benefit-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+@keyframes prism {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+    50% { opacity: 0.4; }
+    100% { transform: translateX(200%) translateY(200%) rotate(45deg); opacity: 0; }
+}
+
+.benefit-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to right,
+        transparent,
+        rgba(255, 255, 255, 0.1) 10%,
+        rgba(255, 182, 255, 0.15) 30%,
+        rgba(182, 255, 255, 0.15) 50%,
+        rgba(255, 255, 182, 0.15) 70%,
+        rgba(255, 255, 255, 0.1) 90%,
+        transparent
+    );
+    transform: translateX(-100%) rotate(45deg);
+    pointer-events: none;
+    opacity: 0;
+    z-index: 20;
+}
+
+.benefit-card:hover::after {
+    animation: prism 1.2s ease-in-out;
+}
+
+.benefit-card:hover .benefit-icon-ring {
+    transform: scale(1.1);
+    border-color: rgba(233, 195, 73, 0.8);
+    box-shadow: 0 0 20px rgba(233, 195, 73, 0.2);
+}
+
+.gilded-jewel {
+    background: linear-gradient(135deg, #ffe088 0%, #e9c349 50%, #af8d11 100%);
+    box-shadow: 0 4px 15px rgba(233, 195, 73, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+.gilded-jewel::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 4px 15px rgba(233, 195, 73, 0.3), inset 0 2px 0 rgba(255, 255, 255, 0.3); }
+    50% { box-shadow: 0 4px 25px rgba(233, 195, 73, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.5); }
+}
+.gilded-jewel.animate-pulse {
+    animation: pulse-glow 3s infinite;
+}
+
+@keyframes progress-shrink {
+    0% { width: 100%; }
+    100% { width: 5%; }
+}
+.progress-bar-fill {
+    animation: progress-shrink 180s linear forwards;
+}
