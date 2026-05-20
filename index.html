@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;700;900&amp;family=Manrope:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Playfair+Display:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -70,10 +71,34 @@
                         "xl": "0.5rem",
                         "full": "0.75rem"
                 },
+                "spacing": {
+                        "section-gap-mobile": "64px",
+                        "margin-mobile": "20px",
+                        "section-gap-desktop": "120px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px",
+                        "base": "8px"
+                },
                 "fontFamily": {
                         "headline": ["Epilogue"],
                         "body": ["Manrope"],
-                        "label": ["Manrope"]
+                        "label": ["Manrope"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"]
+                },
+                "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "42px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "fontWeight": "600" }],
+                        "display-lg": ["72px", { "lineHeight": "84px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
                 }
               },
             },
@@ -1293,6 +1318,185 @@
             </div>
         </div>
     </section>
+
+    <!-- ═══ FAQ: Grand Reveal Mosaic ═══ -->
+    <style>
+        .faq-glass-panel {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(233, 195, 73, 0.1);
+        }
+
+        .faq-module {
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+            overflow: hidden;
+        }
+
+        .faq-module .faq-answer {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .faq-module:hover {
+            background: rgba(26, 26, 26, 0.8);
+            border-color: rgba(233, 195, 73, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .faq-module:hover .faq-answer {
+            max-height: 500px;
+            opacity: 1;
+            transform: translateY(0);
+            padding-top: 24px;
+        }
+
+        .faq-module:hover .faq-chevron {
+            color: #e9c349;
+            transform: rotate(180deg);
+        }
+
+        .faq-cinematic-glow {
+            background: radial-gradient(circle at 50% 0%, rgba(233, 195, 73, 0.05) 0%, transparent 70%);
+        }
+
+        @media (min-width: 768px) {
+            .faq-bento-span-2 { grid-column: span 2; }
+            .faq-bento-span-1 { grid-column: span 1; }
+            .faq-col-start-2 { grid-column-start: 2; }
+        }
+    </style>
+
+    <section id="faq" class="faq-cinematic-glow py-16 md:py-[120px] px-5 md:px-20">
+        <!-- Section Header -->
+        <div class="max-w-[800px] mb-16 md:mb-24">
+            <span class="font-label-caps text-label-caps text-secondary mb-4 block tracking-widest" style="font-family:'Montserrat',sans-serif;font-size:12px;line-height:16px;letter-spacing:0.15em;font-weight:700;">KNOWLEDGE MODULES</span>
+            <h2 class="font-display text-on-background mb-6 leading-tight" style="font-family:'Playfair Display',serif;font-size:clamp(32px,5vw,72px);line-height:1.15;font-weight:700;letter-spacing:-0.02em;">
+                Grand Reveal Mosaic
+            </h2>
+            <p class="text-on-surface-variant max-w-2xl" style="font-family:'Montserrat',sans-serif;font-size:18px;line-height:28px;font-weight:400;">
+                Essential insights into the most prestigious luxury pageant in the nation. Discover the path to the crown through our curated knowledge modules.
+            </p>
+        </div>
+
+        <!-- Bento Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+            <!-- FAQ 1 — Large span -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-2 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:32px;line-height:42px;font-weight:500;" class="text-on-background w-[85%]">What are the eligibility criteria for participating in DPM INDIA 2026?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:18px;line-height:28px;font-weight:400;">
+                    Participants must be Indian citizens, aged between 18 and 28 years as of January 1, 2026. Unmarried status is required for the Miss category, while specific marital criteria apply to Mrs. categories. A minimum height of 5'5" without heels is preferred, though exceptional talent may warrant a waiver.
+                </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">How do I submit my application?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    Applications must be submitted exclusively through our official portal. Ensure you have high-resolution portfolio images, an introductory video, and valid identification documents ready before commencing the process.
+                </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">What is the selection process?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    The journey begins with digital portfolio screening, followed by regional virtual auditions. Shortlisted candidates will then be invited to our exclusive grooming workshops in Mumbai before the grand finale.
+                </div>
+            </div>
+
+            <!-- FAQ 4 — Large span -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-2 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:32px;line-height:42px;font-weight:500;" class="text-on-background w-[85%]">What does the comprehensive grooming program entail?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:18px;line-height:28px;font-weight:400;">
+                    Our intensive 14-day grooming residency covers advanced runway techniques, editorial posing, public speaking, etiquette, and personal branding. Industry stalwarts, including supermodels, acclaimed designers, and communication experts, personally mentor the finalists.
+                </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">Is there an entry fee?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    A nominal processing fee of ₹2,500 is required upon application submission. Should you be selected as a finalist, a comprehensive participation package will be detailed, covering accommodation, grooming, and wardrobe.
+                </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">Who comprises the judging panel?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    The jury consists of luminaries from the fashion, entertainment, and business sectors. Past panels have included renowned couturiers, leading editorial directors, and celebrated actors.
+                </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">Can international residents apply?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    Non-Resident Indians (NRIs) and Overseas Citizens of India (OCIs) are welcome to apply, provided they hold valid documentation and can attend the mandatory in-person phases in India.
+                </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">What are the key dates?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    Applications close on October 31, 2025. Regional auditions will be conducted in November, and the grand finale is scheduled for February 2026 in New Delhi.
+                </div>
+            </div>
+
+            <!-- FAQ 9 — Large span -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-2 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:32px;line-height:42px;font-weight:500;" class="text-on-background w-[85%]">What opportunities await the winner?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:18px;line-height:28px;font-weight:400;">
+                    The titleholder receives the prestigious DPM crown, a cash prize, an annual contract with Elite Media Group, and the opportunity to represent India at select international pageants. Furthermore, they gain exclusive access to premier fashion weeks and editorial shoots.
+                </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-module faq-glass-panel rounded-lg p-8 faq-bento-span-1 faq-col-start-2 relative cursor-default">
+                <div class="flex justify-between items-start">
+                    <h3 style="font-family:'Playfair Display',serif;font-size:24px;line-height:32px;font-weight:500;" class="text-on-background w-[85%]">How can I contact support?</h3>
+                    <span class="material-symbols-outlined faq-chevron text-outline transition-all duration-500" style="font-size:24px;">stat_minus_1</span>
+                </div>
+                <div class="faq-answer text-on-surface-variant border-t border-secondary/10 mt-6" style="font-family:'Montserrat',sans-serif;font-size:16px;line-height:24px;font-weight:400;">
+                    For technical assistance with your application or specific queries not addressed here, please contact our concierge desk at <a href="mailto:concierge@dpmindia.com" class="text-secondary underline underline-offset-4 hover:brightness-125 transition-all">concierge@dpmindia.com</a>.
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ═══ END FAQ ═══ -->
 
     <footer class="main-footer">
         <div class="container footer-content">
